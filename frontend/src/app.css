@@ -1,0 +1,12 @@
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  @layer components {
+   	.url {
+		@apply dark:hover:text-DarkGreen hover:text-Green dark:text-DarkBlue text-Blue m-2;
+	} 
+    .miss {
+      @apply underline text-red-500 rounded-xl bg-yellow-400 p-2 m-2 border-2 border-blue-400;
+    }
+  }

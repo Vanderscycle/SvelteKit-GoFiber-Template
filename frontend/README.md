@@ -1,0 +1,7 @@
+# Frontend
+
+```
+VITE_WEBSITE_STATE=
+GO_BACKEND_URL=
+GO_BACKEND_PORT=
+```

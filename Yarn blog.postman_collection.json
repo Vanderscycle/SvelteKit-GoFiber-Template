@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "5aa9d91d-6bf9-4053-a428-80889f9679d6",
+		"name": "Yarn blog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "All posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BACKEND_URL}}:{{BACKEND_PORT}}/{{ENDPOINT_BLG}}",
+					"host": [
+						"{{BACKEND_URL}}"
+					],
+					"port": "{{BACKEND_PORT}}",
+					"path": [
+						"{{ENDPOINT_BLG}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "drop db",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{BACKEND_URL}}:{{BACKEND_PORT}}/{{ENDPOINT_DB}}",
+					"host": [
+						"{{BACKEND_URL}}"
+					],
+					"port": "{{BACKEND_PORT}}",
+					"path": [
+						"{{ENDPOINT_DB}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "new blog entry",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"it's a me\",\n    \"author\": \"Mario\",\n    \"mainText\": \"WAouh\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BACKEND_URL}}:{{BACKEND_PORT}}/{{ENDPOINT_BLG}}",
+					"host": [
+						"{{BACKEND_URL}}"
+					],
+					"port": "{{BACKEND_PORT}}",
+					"path": [
+						"{{ENDPOINT_BLG}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "single post",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BACKEND_URL}}:{{BACKEND_PORT}}/{{ENDPOINT_BLG}}/1",
+					"host": [
+						"{{BACKEND_URL}}"
+					],
+					"port": "{{BACKEND_PORT}}",
+					"path": [
+						"{{ENDPOINT_BLG}}",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "single blog entry",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{BACKEND_URL}}:{{BACKEND_PORT}}/{{ENDPOINT_BLG}}/1",
+					"host": [
+						"{{BACKEND_URL}}"
+					],
+					"port": "{{BACKEND_PORT}}",
+					"path": [
+						"{{ENDPOINT_BLG}}",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
