@@ -1,10 +1,7 @@
 # Backend
 
 ## Gofiber/fiber
-
-First backend project, and placed all my learning into a *.lesson.md
-
-## backend
+* [Documentation](https://github.com/gofiber/fiber)
 
 ### Launch the backend
 ```bash
@@ -23,5 +20,5 @@ DB_NAME=
 PORT=5433
 LISTEN_ADDR=localhost:8080
 REDIS_ADDR=localhost:6379
-
 ```
+## DB
