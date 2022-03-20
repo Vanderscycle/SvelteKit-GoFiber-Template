@@ -26,6 +26,6 @@
 </script>
 
 <template>
-	<h1>Balls of noods new blog</h1>
+	<h1>SvelteKit - Golang template </h1>
 	<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
 </template>
