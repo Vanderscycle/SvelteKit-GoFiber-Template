@@ -1,3 +1,4 @@
+# taken from https://github.com/gofiber/boilerplate
 # Building the binary of the App
 FROM golang:latest AS build
 
