@@ -3,7 +3,7 @@
 FROM golang:latest AS build
 
 # `boilerplate` should be replaced with your project name
-WORKDIR /go/src/boilerplate
+WORKDIR /app
 
 # Copy all the Code and stuff to compile everything
 COPY . .
@@ -21,7 +21,7 @@ FROM alpine:latest
 WORKDIR /app
 
 # `boilerplate` should be replaced here as well
-COPY --from=build /go/src/boilerplate/app .
+COPY --from=build /app .
 # I have much to learn from multi-stage containers https://stackoverflow.com/questions/65939284/how-to-pass-env-file-to-docker-image-in-a-go-project
 COPY .env /app 
 

@@ -21,21 +21,21 @@ services:
   #     - SECRET_KEY=aabbcc
   #     - ENV_IS_SET
 
-  backend:
-    restart: unless-stopped
-    build:
-      context: ./backend
-      dockerfile: Dockerfile
-    ports:
-      - "5000:3000"
-    depends_on:
-      - db
+  # backend:
+  #   restart: unless-stopped
+  #   build:
+  #     context: ./backend
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - "5000:3000"
+  #   depends_on:
+  #     - db
 
-  frontend:
-    restart: unless-stopped
-    build:
-      context: ./frontend
-      dockerfile: Dockerfile.dev
-    depends_on:
-      - db
-      - backend
+  # frontend:
+  #   restart: unless-stopped
+  #   build:
+  #     context: ./frontend
+  #     dockerfile: Dockerfile.dev
+  #   depends_on:
+  #     - db
+  #     - backend
