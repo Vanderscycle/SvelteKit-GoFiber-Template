@@ -22,6 +22,8 @@ WORKDIR /app
 
 # `boilerplate` should be replaced here as well
 COPY --from=build /go/src/boilerplate/app .
+# I have much to learn from multi-stage containers https://stackoverflow.com/questions/65939284/how-to-pass-env-file-to-docker-image-in-a-go-project
+COPY .env /app 
 
 # Exposes port 3000 because our program listens on that port
 EXPOSE 3000

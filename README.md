@@ -15,6 +15,7 @@ I personally prefer podman/buildah/podman-compose over Docker
 To build an image (e.g. backend)
 ```bash
 podman build ./backend -t go-fiber:latest
+# you can use no cache just like in docker --no-cache
 ```
 
 To confirm that it loaded correctly
@@ -32,8 +33,13 @@ podman container list -a
 Should you run into issues (the container exited)
 ```bash
 podman logs -t {name}
-
 ```
+
+To enter a running container
+```bash
+podman exec -it <Container ID> /bin/bash
+```
+
 ---
 
 # Notes
