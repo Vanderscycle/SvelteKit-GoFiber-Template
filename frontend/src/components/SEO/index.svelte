@@ -1,5 +1,5 @@
 <script lang="ts">
-	import website from "$lib/config/website";
+	import website from '$lib/config/website';
 </script>
 
 <svelte:head>
@@ -12,4 +12,3 @@
 	<meta name="description" content={website.metadescription} />
 	<html lang={website.siteLanguage} />
 </svelte:head>
-

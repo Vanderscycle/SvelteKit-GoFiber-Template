@@ -1,7 +1,7 @@
 import { variables } from '$lib/variables';
 
 const website = {
-	author: 'Autho',
+	author: 'Author',
 	ogLanguage: 'en_CA',
 	siteLanguage: 'en_CA',
 	keywords: 'Github svelte template',
