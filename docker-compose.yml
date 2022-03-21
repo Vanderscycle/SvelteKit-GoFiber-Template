@@ -1,3 +1,4 @@
+# INFO: excellent example https://github.com/KenMwaura1/go-todo-api/blob/main/docker-compose.yaml
 version: "3.9"
    
 services:
@@ -6,12 +7,16 @@ services:
     restart: unless-stopped
     volumes:
       - ./data/db:/var/lib/postgresql/data
+    # TODO: make the secret exportable
     environment:
       - POSTGRES_DB=gorm
-      - POSTGRES_USER=gorm
+      - POSTGRES_USER=db
       - POSTGRES_PASSWORD=postgres
     ports:
       - "5433:5432"
+    networks:
+      - backend-net
+
 
   # redis:
   #   image: redis:alpine
@@ -21,15 +26,17 @@ services:
   #     - SECRET_KEY=aabbcc
   #     - ENV_IS_SET
 
-  # backend:
-  #   restart: unless-stopped
-  #   build:
-  #     context: ./backend
-  #     dockerfile: Dockerfile
-  #   ports:
-  #     - "5000:3000"
-  #   depends_on:
-  #     - db
+  backend:
+    restart: unless-stopped
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "5000:3000"
+    networks:
+      - backend-net
+    depends_on:
+      - db
 
   # frontend:
   #   restart: unless-stopped
@@ -39,3 +46,6 @@ services:
   #   depends_on:
   #     - db
   #     - backend
+networks:
+  backend-net:
+    name: backend-net

@@ -6,12 +6,12 @@ import (
 	"backend/blogPost"
 	"backend/database"
 	"backend/db"
-	"context"
+	// "context"
 	"fmt"
 	"log"
 	"os"
 
-	"github.com/go-redis/redis/v8"
+	// "github.com/go-redis/redis/v8"
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
 	"github.com/joho/godotenv"
@@ -71,7 +71,7 @@ func initPostgresDatabase() {
 	var err error
 	database.DBConn, err = gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
-		panic("Failed to connec to database")
+		panic("Failed to connect to database")
 	}
 	fmt.Println("Database connection successfully")
 	//automigrate
