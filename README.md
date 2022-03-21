@@ -20,7 +20,7 @@ podman build ./backend -t go-fiber:latest
 # you can use no cache just like in docker --no-cache
 ```
 
-To confirm that it loaded correctly
+To confirm that it loaded correctly (rg being ripgrep)
 ```bash
 podman images | rg "go-fiber"
 ```

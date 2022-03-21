@@ -10,7 +10,7 @@ services:
     # TODO: make the secret exportable
     environment:
       - POSTGRES_DB=gorm
-      - POSTGRES_USER=db
+      - POSTGRES_USER=gorm
       - POSTGRES_PASSWORD=postgres
     ports:
       - "5433:5432"

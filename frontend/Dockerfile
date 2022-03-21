@@ -25,12 +25,12 @@ FROM node:lts-alpine
 WORKDIR /app
 
 # copy files from previous step
-COPY --from=builder /usr/src/app/build .
+COPY --from=builder /usr/src/app/.svelte-kit .
 COPY --from=builder /usr/src/app/package.json .
 COPY --from=builder /usr/src/app/node_modules ./node_modules
 
 # our app is running on port 3000 within the container, so need to expose it
-EXPOSE 3000
+EXPOSE 5000
 
 # the command that starts our app
 CMD ["node", "index.js"]
