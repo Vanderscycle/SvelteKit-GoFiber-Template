@@ -1,3 +1,4 @@
+# taken from https://myrmod.de/posts/how-to-host-a-sveltekit-project-with-docker-https
 ### Build Step
 # pull the Node.js Docker image
 FROM node:lts-alpine as builder
