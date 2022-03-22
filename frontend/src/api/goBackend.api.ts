@@ -17,7 +17,7 @@ export class GoRestClient {
 		console.log(this.baseUrl, group);
 	}
 
-	async get(id?: string): Promise<BlogPost[]> {
+	async get(id?: string | number): Promise<BlogPost[]> {
 		try {
 			let res: any;
 			if (id) {
@@ -46,9 +46,9 @@ export class GoRestClient {
 	}
 
 	//TODO: make the change in the backend so that it return the obj
-	async delete(id: number): Promise<string> {
+	async delete(id?: number): Promise<string> {
 		try {
-			if (id !== 0) {
+			if (id) {
 				return await axios.delete(`${this.baseUrl}/${id}`);
 			} else {
 				return await axios.delete(`${this.baseUrl}`);
