@@ -1,7 +1,6 @@
 import type { BlogPost } from '$lib/interfaces';
 import { variables } from '$lib/variables';
 import axios from 'axios';
-variables;
 
 //TODO: how do I make it more general with return types?
 
