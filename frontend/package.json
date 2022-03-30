@@ -9,6 +9,7 @@
     "prepare": "svelte-kit sync",
     "test": "jest src",
     "test:watch": "npm run test -- --watch",
+    "test:coverage": "jest --coverage",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
     "lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
