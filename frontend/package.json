@@ -46,7 +46,12 @@
   },
   "type": "module",
   "dependencies": {
-    "axios": "^0.26.1"
+    "@hapi/iron": "^6.0.0",
+    "@magic-sdk/admin": "^1.4.0",
+    "axios": "^0.26.1",
+    "cookie": "^0.4.2",
+    "dotenv": "^16.0.0",
+    "magic-sdk": "^8.1.0"
   },
   "jest": {
     "transform": {

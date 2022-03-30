@@ -8,3 +8,11 @@ export interface BlogPost {
 	author: string;
 	mainText: string;
 }
+
+export interface Locals {
+	user?: {
+		issuer: string;
+		publicAddress: string;
+		email: string;
+	};
+}

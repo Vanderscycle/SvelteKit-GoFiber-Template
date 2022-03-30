@@ -40,5 +40,4 @@
 </template>
 
 <style lang="postcss">
-	/* your styles go here */
 </style>
