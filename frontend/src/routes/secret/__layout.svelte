@@ -17,7 +17,7 @@
   </pre>
 	{/if}
 	<main class="dark:bg-DarkBg bg-LightBg h-screen dark:text-darkText text-Text">
-		{#if variables.currentState !== 'dev'}
+		{#if variables.currentState === 'dev'}
 			{#if $magicStore}
 				<slot />
 			{:else}
