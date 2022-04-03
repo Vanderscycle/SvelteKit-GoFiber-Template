@@ -1,9 +1,8 @@
-# taken from https://github.com/gofiber/boilerplate
 # Building the binary of the App
 FROM golang:latest AS build
 
 # `boilerplate` should be replaced with your project name
-WORKDIR /app
+WORKDIR /go/src/boilerplate
 
 # Copy all the Code and stuff to compile everything
 COPY . .
@@ -20,12 +19,16 @@ FROM alpine:latest
 
 WORKDIR /app
 
+# Create the `public` dir and copy all the assets into it
+# RUN mkdir ./static
+# COPY ./static ./static
+
 # `boilerplate` should be replaced here as well
-COPY --from=build /app .
-# I have much to learn from multi-stage containers https://stackoverflow.com/questions/65939284/how-to-pass-env-file-to-docker-image-in-a-go-project
-COPY .env /app 
+COPY --from=build /go/src/boilerplate/app .
 
 # Exposes port 3000 because our program listens on that port
 EXPOSE 3000
 
 CMD ["./app"]
+
+
